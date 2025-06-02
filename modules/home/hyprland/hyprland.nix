@@ -30,8 +30,8 @@ in {
       source = ../../../wallpapers;
       recursive = true;
     };
-    ".face.icon".source = ./face.jpg;
-    ".config/face.jpg".source = ./face.jpg;
+    ".face.icon".source = ./face_fog.png;
+    ".config/face.jpg".source = ./face_fog.png;
   };
   wayland.windowManager.hyprland = {
     enable = true;
