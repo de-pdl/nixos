@@ -15,7 +15,7 @@ in {
       "$modifier SHIFT,N,exec,swaync-client -rs"
       "$modifier,W,exec,${browser}"
       "$modifier,Y,exec,kitty -e yazi"
-      "$modifier,E,exec,emopicker9000"
+      "$modifier,E,exec,thunar"
       "$modifier,S,exec,screenshootin"
       "$modifier,D,exec,discord"
       "$modifier,O,exec,obs"

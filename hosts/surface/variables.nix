@@ -5,14 +5,15 @@
 
   # Hyprland Settings
   # ex: extraMonitorSettings = "monitor = Virtual-1,1920x1080@60,auto,1";
-  # ex: extraMonitorSettings = "monitor = HDMI-A-1,1920x1080@60,auto,1";
+  # extraMonitorSettings = "monitor = DP-5, 2560x1440@144,auto,1";
+
   extraMonitorSettings = "";
 
   # Waybar Settings
   clock24h = false;
 
   # Program Options
-  browser = "brave"; # Set Default Browser (google-chrome-stable for google-chrome)
+  browser = "google-chrome-stable"; # Set Default Browser (google-chrome-stable for google-chrome)
   terminal = "kitty"; # Set Default System Terminal
   keyboardLayout = "us";
   consoleKeyMap = "us";
@@ -34,9 +35,9 @@
   #  Available Options:
   #waybarChoice = ../../modules/home/waybar/waybar-simple.nix;
   #waybarChoice = ../../modules/home/waybar/waybar-ddubs.nix;
-  #waybarChoice = ../../modules/home/waybar/waybar-ddubs-2.nix;
+  waybarChoice = ../../modules/home/waybar/waybar-ddubs-2.nix;
   #waybarChoice = ../../modules/home/waybar/Jerry-waybar.nix;
-  waybarChoice = ../../modules/home/waybar/waybar-curved.nix;
+  #waybarChoice = ../../modules/home/waybar/waybar-curved.nix;
 
   # Set Animation style
   # Available options are:
