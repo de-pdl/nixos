@@ -4,6 +4,6 @@
     discord
     obsidian
     spotify
-    #    citrix_workspace_24_08_0
+    citrix_workspace
   ];
 }
