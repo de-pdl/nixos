@@ -36,7 +36,5 @@ in {
     ./yazi
     ./zoxide.nix
     ./zsh
-
-    ./home_pkgs.nix
   ];
 }

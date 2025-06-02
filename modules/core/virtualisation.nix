@@ -9,6 +9,6 @@
     virt-manager.enable = false;
   };
   environment.systemPackages = with pkgs; [
-    # virt-viewer # View Virtual Machines
+    virt-viewer # View Virtual Machines
   ];
 }
