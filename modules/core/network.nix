@@ -17,10 +17,15 @@
         59010
         59011
         8080
+        1494 # docker
+        2598 # docker
       ];
       allowedUDPPorts = [
         59010
         59011
+
+        1494 # docker
+        2590 # docker
       ];
     };
   };
