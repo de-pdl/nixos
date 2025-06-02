@@ -164,6 +164,10 @@ in {
         new_on_top = 1;
         mfact = 0.5;
       };
+      device = {
+        name = "steelseries-steelseries-prime-mini-wireless-3";
+        sensitivity = 0.30;
+      };
     };
 
     extraConfig = "
