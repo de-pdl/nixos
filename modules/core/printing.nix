@@ -9,7 +9,7 @@ in {
       ];
     };
     avahi = {
-      enable = printEnable;
+      #      enable = printEnable;
       nssmdns4 = true;
       openFirewall = true;
     };

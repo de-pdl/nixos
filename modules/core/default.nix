@@ -21,7 +21,7 @@
     ./user.nix
     ./virtualisation.nix
     ./xserver.nix
-    #./cifs.nix
+    ./cifs.nix
     inputs.stylix.nixosModules.stylix
   ];
 }
