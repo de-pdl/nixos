@@ -4,6 +4,8 @@
     discord
     obsidian
     spotify
-    citrix_workspace
+    remmina
+    bitwarden-desktop
+    #citrix_workspace
   ];
 }
