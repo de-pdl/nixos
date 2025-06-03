@@ -1,12 +1,26 @@
-{pkgs}:
-pkgs.writeShellScriptBin "mnt-ayush" ''
+{pkgs}: let
+  mntScript = pkgs.writeShellScriptBin "mnt-ayush" ''
+    MOUNT_POINT="/mnt/ayush"
+    REMOTE="//192.168.86.22/Ayush"
+    CREDS="$HOME/.secrets/smb_creds"
+    MYUID=$(id -u)
+    MYGID=$(id -g)
 
-  MOUNT_POINT = "/mnt/ayush"
-  REMOTE="//192.168.86.22/Ayush"
 
-  sudo mkdir -p "$MOUNT_POINT"
+    sudo mkdir -p "$MOUNT_POINT"
+    sudo mount -t cifs -o \
+    uid="$MYUID",gid="$MYGID",\
+    credentials="$CREDS" \
+    "$REMOTE" "$MOUNT_POINT"
+  '';
 
-  sudo mount -t cifs "$REMOTE" "$MOUNT_POINT" \
-    -o credentials=$HOME/.secrets/smb_creds,uid=$(id -u),gid=$(id -g), version = 3.0, iocharset = utf8
+  umntScript = pkgs.writeShellScriptBin "umnt-ayush" ''
+    MOUNT_POINT="/mnt/ayush"
 
-''
+    sudo umount "$MOUNT_POINT"
+  '';
+in
+  pkgs.symlinkJoin {
+    name = "smb-mnt-ayush-scripts";
+    paths = [mntScript umntScript];
+  }
