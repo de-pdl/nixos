@@ -7,7 +7,10 @@
   # ex: extraMonitorSettings = "monitor = Virtual-1,1920x1080@60,auto,1";
   # extraMonitorSettings = "monitor = DP-5, 2560x1440@144,auto,1";
 
-  extraMonitorSettings = "";
+  extraMonitorSettings = "
+    monitor = DP-5, 2560x1440@144, auto, auto
+    monitor = DP-4, 1920x1080@144, auto, auto
+    ";
 
   # Waybar Settings
   clock24h = false;
