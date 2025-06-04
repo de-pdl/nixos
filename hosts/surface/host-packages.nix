@@ -6,6 +6,9 @@
     spotify
     remmina
     bitwarden-desktop
+    python313Packages.dbus-python
+    dbus
     #citrix_workspace
   ];
+  boot.initrd.systemd.dbus.enable = true;
 }
