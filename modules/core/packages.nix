@@ -17,7 +17,7 @@
   nixpkgs.config.allowUnfree = true;
 
   environment.systemPackages = with pkgs; [
-    amfora # Fancy Terminal Browser For Gemini Protocol
+    #amfora # Fancy Terminal Browser For Gemini Protocol
     appimage-run # Needed For AppImage Support
     bottom # btop like util
     brave # Brave Browser
@@ -64,6 +64,6 @@
     v4l-utils # Used For Things Like OBS Virtual Camera
     waypaper # backup wallpaper GUI
     wget # Tool For Fetching Files With Links
-    ytmdl # Tool For Downloading Audio From YouTube
+    #ytmdl # Tool For Downloading Audio From YouTube
   ];
 }

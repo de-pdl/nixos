@@ -6,9 +6,10 @@
     spotify
     remmina
     bitwarden-desktop
-    python313Packages.dbus-python
-    dbus
+    python313Packages.dbus-python #check to remove
+    dbus #check to remove
     #citrix_workspace
+    nextcloud-client
   ];
-  boot.initrd.systemd.dbus.enable = true;
+  boot.initrd.systemd.dbus.enable = true; #check to remove
 }

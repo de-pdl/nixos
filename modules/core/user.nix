@@ -40,4 +40,17 @@ in {
     ignoreShellProgramCheck = true;
   };
   nix.settings.allowed-users = ["${username}"];
+
+  # no password with sudo
+  security.sudo.extraRules = [
+    {
+      users = ["${username}"];
+      commands = [
+        {
+          command = "ALL";
+          options = ["NOPASSWD"];
+        }
+      ];
+    }
+  ];
 }
