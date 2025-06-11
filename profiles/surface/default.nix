@@ -4,6 +4,7 @@
     #../../modules/drivers
     #../../modules/core
     ./core.nix
+    ./drivers.nix
     ./home.nix
   ];
   # Enable GPU Drivers

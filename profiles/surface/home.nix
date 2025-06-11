@@ -29,9 +29,7 @@ in {
     ../../modules/home/swappy.nix
     ../../modules/home/swaync.nix
     ../../modules/home/virtmanager.nix
-
     waybarChoice
-
     ../../modules/home/wezterm.nix
     ../../modules/home/wlogout
     ../../modules/home/xdg.nix
