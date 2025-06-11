@@ -52,4 +52,11 @@
 
   # Enable Thunar GUI File Manager
   thunarEnable = true;
+
+  ## what are things i want to decide in variables
+
+  #enable bluetooth
+  bluetoothEnable = true;
+
+  #enable
 }
