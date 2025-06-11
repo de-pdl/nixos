@@ -5,7 +5,7 @@
   ];
 
   services.logind = {
-    lidSwitch = "ignore";
+    lidSwitch = "sleep";
     lidSwitchDocked = "ignore";
     lidSwitchExternalPower = "ignore";
   };
