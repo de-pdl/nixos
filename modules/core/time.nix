@@ -3,7 +3,7 @@
   pkgs,
   ...
 }: {
-  #add to variables
+  #add to variables #from profile
   time.timeZone = "Australia/Sydney";
   i18n.defaultLocale = "en_US.UTF-8";
   i18n.extraLocaleSettings = {
@@ -18,5 +18,5 @@
     LC_TIME = "en_US.UTF-8";
   };
 
-  console.keyMap = "us";
+  console.keyMap = "us"; #from machines
 }

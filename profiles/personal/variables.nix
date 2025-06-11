@@ -1,38 +1,54 @@
 {
+  ### what is the point of all this?
+  ### this will affect the core modules / home modules
+  ### without having to adjust manually
+
   # Git Configuration ( For Pulling Software Repos )
   gitUsername = "Ayush Paudel";
   gitEmail = "83343839+de-pdl@users.noreply.github.com";
 
-  # Hyprland Settings
-  # ex: extraMonitorSettings = "monitor = Virtual-1,1920x1080@60,auto,1";
-  # extraMonitorSettings = "monitor = DP-5, 2560x1440@144,auto,1";
-
-  extraMonitorSettings = "
-    monitor = DP-5, 2560x1440@144, auto, 1
-    monitor = DP-4, 1920x1080@144, auto, 1
-    ";
-
-  # Waybar Settings
-  clock24h = false;
-
-  # Program Options
-  browser = "google-chrome-stable"; # Set Default Browser (google-chrome-stable for google-chrome)
-  terminal = "kitty"; # Set Default System Terminal
-  keyboardLayout = "us";
-  consoleKeyMap = "us";
-
-  # For Nvidia Prime support
-  intelID = "PCI:1:0:0";
-  nvidiaID = "PCI:0:2:0";
+  ## what are things i want to decide in variables
+  ## personal services {you may use you may not}
 
   # Enable NFS
-  enableNFS = true;
+  enableNFS = false;
+  # Enable SMB
+  enableSMB = false;
 
   # Enable Printing Support
   printEnable = false;
+  # Enable Bluetooth
+  bluetoothEnable = true;
+
+  # Enable Tailscale
+  tailscaleEnable = true;
+  # Enable SSH(d)
+  sshdEnable = true;
+
+  # sudo with no password
+  sudoNoPswd = true;
+
+  timeZone = "Australia/Sydeny";
+  defaultLocale = "en_US.UTF-8";
+  extraLocaleSettings = "en_US.UTF-8";
+
+  #enable GUI or CLI {its for like servers or personal use}
+  interfaceStyle = "GUI"; # or "CLI";
+  # line of thought = if GUI then use GUI + CLI variables
+  # else CLI variables only
+  # in the future I do want to change it into different files
+
+  # Program Options
+
+  # default browser select {for hyprland binds cur}
+  browser = "google-chrome-stable"; # Set Default Browser (google-chrome-stable for google-chrome)
+  terminal = "kitty"; # Set Default System Terminal ## GUI variables
 
   # Set Stylix Image
   stylixImage = ../../wallpapers/AnimeGirlNightSky.jpg;
+
+  # Waybar Settings
+  clock24h = false;
 
   # Set Waybar
   #  Available Options:
@@ -52,11 +68,4 @@
 
   # Enable Thunar GUI File Manager
   thunarEnable = true;
-
-  ## what are things i want to decide in variables
-
-  #enable bluetooth
-  bluetoothEnable = true;
-
-  #enable
 }

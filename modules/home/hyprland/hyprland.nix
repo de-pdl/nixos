@@ -1,14 +1,18 @@
 {
   profile,
+  machine,
   config,
   pkgs,
   ...
 }: let
   inherit
     (import ../../../profiles/${profile}/variables.nix)
+    stylixImage
+    ;
+  inherit
+    (import ../../../machines/${machine}/variables.nix)
     extraMonitorSettings
     keyboardLayout
-    stylixImage
     ;
 in {
   home.packages = with pkgs; [
