@@ -30,6 +30,16 @@
         };
         modules = [./profiles/surface];
       };
+      hermes = nixpkgs.lib.nixosSystem {
+        system = "x86_64-linux";
+        specialArgs = {
+          inherit inputs;
+          inherit username;
+          host = "hermes";
+          profile = "vm";
+        };
+        modules = [./profiles/hermes];
+      };
     };
   };
 }
