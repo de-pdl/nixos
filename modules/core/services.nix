@@ -7,15 +7,15 @@
     openssh.enable = true; # Enable SSH
     blueman.enable = true; # Bluetooth Support
     tumbler.enable = true; # Image/video preview
-    gnome.gnome-keyring.enable = true;
+    #gnome.gnome-keyring.enable = true;
 
-    smartd = {
-      enable =
-        if profile == "vm"
-        then false
-        else true;
-      autodetect = true;
-    };
+    #smartd = {
+    #  enable =
+    #    if profile == "vm"
+    #    then false
+    #    else true;
+    #  autodetect = true;
+    #};
     pipewire = {
       enable = true;
       alsa.enable = true;

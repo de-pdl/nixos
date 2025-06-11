@@ -1,13 +1,13 @@
 {
   pkgs,
-  host,
+  machine,
   options,
   ...
 }: {
   networking = {
-    hostName = "${host}";
+    hostName = "${machine}";
     networkmanager.enable = true;
-    timeServers = options.networking.timeServers.default ++ ["pool.ntp.org"];
+    #timeServers = options.networking.timeServers.default ++ ["pool.ntp.org"];
     firewall = {
       enable = true;
       allowedTCPPorts = [
@@ -29,6 +29,12 @@
       ];
     };
   };
+  services.tailscale = {
+    enable = true;
+    useRoutingFeatures = "client";
+  };
 
-  environment.systemPackages = with pkgs; [networkmanagerapplet];
+  #change depending on the environment {in profile}
+
+  #environment.systemPackages = with pkgs; [networkmanagerapplet];
 }

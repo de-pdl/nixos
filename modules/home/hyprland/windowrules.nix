@@ -1,6 +1,6 @@
-{host, ...}: let
+{profile, ...}: let
   inherit
-    (import ../../../hosts/${host}/variables.nix)
+    (import ../../../profiles/${profile}/variables.nix)
     extraMonitorSettings
     ;
 in {

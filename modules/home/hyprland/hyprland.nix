@@ -1,11 +1,11 @@
 {
-  host,
+  profile,
   config,
   pkgs,
   ...
 }: let
   inherit
-    (import ../../../hosts/${host}/variables.nix)
+    (import ../../../profiles/${profile}/variables.nix)
     extraMonitorSettings
     keyboardLayout
     stylixImage

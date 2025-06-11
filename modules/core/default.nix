@@ -1,27 +1,13 @@
-{inputs, ...}: {
+{...}: {
   imports = [
     ./boot.nix
-    ./flatpak.nix
-    ./fonts.nix
-    ./greetd.nix
-    ./hardware.nix
+    ./devices.nix
     ./network.nix
-    ./nfs.nix
-    ./nh.nix
-    ./packages.nix
-    ./printing.nix
-    ./security.nix
+    ./nix.nix
     ./services.nix
-    ./starfish.nix
-    ./steam.nix
+    ./time.nix
+    ./utils_base.nix
+    ./users.nix
     ./stylix.nix
-    ./syncthing.nix
-    ./system.nix
-    ./thunar.nix
-    ./user.nix
-    ./virtualisation.nix
-    ./xserver.nix
-    #./cifs.nix
-    inputs.stylix.nixosModules.stylix
   ];
 }

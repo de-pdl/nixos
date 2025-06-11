@@ -1,8 +1,8 @@
-{host, ...}: let
-  inherit (import ../../hosts/${host}/variables.nix) waybarChoice;
+{profile, ...}: let
+  inherit (import ../../profiles/${profile}/variables.nix) waybarChoice;
 in {
   imports = [
-    ./amfora.nix
+    #./amfora.nix
     ./bash.nix
     ./bashrc-personal.nix
     ./bat.nix
