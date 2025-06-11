@@ -18,16 +18,20 @@
 
   outputs = {nixpkgs, ...} @ inputs: {
     nixosConfigurations = {
-      surface = nixpkgs.lib.nixosSystem {
-        system = "x86_64-linux";
-        specialArgs = {
-          inherit inputs;
-          username = "ayush";
-          machine = "surface";
-          profile = "personal";
+      surface = let
+        profile = "personal";
+        username = "ayush";
+        machine = "surface";
+      in
+        nixpkgs.lib.nixosSystem {
+          system = "x86_64-linux";
+          specialArgs = {
+            inherit inputs profile username machine;
+          };
+          modules = [
+            ./profiles/${profile}
+          ];
         };
-        modules = [./profiles/surface];
-      };
     };
   };
 }

@@ -1,11 +1,11 @@
 {
   pkgs,
-  machines,
+  machine,
   options,
   ...
 }: {
   networking = {
-    hostName = "${machines}";
+    hostName = "${machine}";
     networkmanager.enable = true;
     #timeServers = options.networking.timeServers.default ++ ["pool.ntp.org"];
     firewall = {

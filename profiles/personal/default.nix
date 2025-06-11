@@ -2,10 +2,9 @@
   imports = [
     ../../machines/${machine}
     ./core.nix
-    ./home.nix
     ./profile-pkgs.nix
-
     ./drivers.nix
+    #./home.nix
   ];
 
   drivers.amdgpu.enable = true;
