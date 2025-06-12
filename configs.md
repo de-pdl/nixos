@@ -16,7 +16,9 @@
 ### Service Variables
 
     nfsEnable # to enable NFS Service *boolean*
-    SMBenable # to enable SMB mount *boolean*
+    smbEnable # to enable SMB mount *boolean*
+
+    tailscaleEnable # to enable tailscale *boolean*
     sshdEnable # to enable openssh *boolean*
 
 ### Account Variables
@@ -26,17 +28,20 @@
         - "GUI" | "CLI" 
         - GUI is GUI + CLI otherwise CLI is just CLI
 
-### CLI Variables
+### CLI Variables / Pkgs
 
-    defaultCLIapp1 # must have cli items *string*
-    defaultCLIapp2 # must have cli items *string*
-    defaultCLIapp3 # must have cli items *string*
-        - let it either be a pkg from nix
-        - or "null"
+    installs 
+        : terminalMux - tmux - manage through home
+        : textEditor - nvim - manage through home
+        : terminalFileManager - yazi - manage through home
+            - let it either be a pkg from nix
+            - or "null"
 
-    terminal # default tty *string*
+    terminalMux # terminal multiplexer *string*
+    textEditor # terminal texteditor *string*
+    terminalFileManger # terminal file manager *string*
 
-### GUI Variables
+### GUI Variables / Pkgs
 
     [Important Note: I have yet to configure this
     properly so when I get to fixing this I will
@@ -51,6 +56,7 @@
 
     brower # default browser *string*
     thunarEnable # enable thunar *boolean*
+    terminal # terminal emulator *string*
 
     stylixImage # background for stylix *path*
     clock24h # waybar clock setting *boolean*

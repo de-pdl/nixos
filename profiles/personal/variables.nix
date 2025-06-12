@@ -12,9 +12,9 @@
   ## personal services {you may use you may not}
 
   # Enable NFS
-  enableNFS = false; # to link
+  nfsEnable = false; # to link
   # Enable SMB
-  enableSMB = false; # to link
+  smbEnable = false; # to link
 
   # Enable Tailscale
   tailscaleEnable = true; # to link
