@@ -11,30 +11,25 @@
   ## what are things i want to decide in variables
   ## personal services {you may use you may not}
 
-  # Enable NFS
-  nfsEnable = false; # to link
-  # Enable SMB
-  smbEnable = false; # to link
+  smbEnable = true;
 
-  # Enable Tailscale
-  tailscaleEnable = true; # to link
-  # Enable SSH(d)
-  sshdEnable = true; # to link
+  tailscaleEnable = true;
+  sshdEnable = true;
 
-  # sudo with no password
-  sudoNoPswd = true; # to link
-
-  timeZone = "Australia/Sydeny";
+  timeZone = "Australia/Sydney";
   defaultLocale = "en_US.UTF-8";
   extraLocaleSettings = "en_US.UTF-8";
 
-  #enable GUI or CLI {its for like servers or personal use}
+  sudoNoPswd = true;
+  #========= to do ===================#
   interfaceStyle = "GUI"; # or "CLI";
-  # line of thought = if GUI then use GUI + CLI variables
-  # else CLI variables only
-  # in the future I do want to change it into different files
-
   # Program Options
+
+  # CLI
+
+  terminalMux = "tmux";
+  textEditor = "nvim";
+  terminalFileManager = "yazi";
 
   # default browser select {for hyprland binds cur}
   browser = "google-chrome-stable"; # Set Default Browser (google-chrome-stable for google-chrome)

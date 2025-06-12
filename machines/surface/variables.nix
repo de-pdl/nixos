@@ -5,9 +5,9 @@
     ";
 
   # Enable Printing Support
-  printEnable = false; # to link
+  printEnable = false;
   # Enable Bluetooth
-  bluetoothEnable = true; # to link
+  bluetoothEnable = true;
 
   keyboardLayout = "us";
   consoleKeyMap = "us";

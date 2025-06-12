@@ -12,21 +12,26 @@
     timeZone # self-explanatory *string*
     defaultLocale # self-explanatory *string*
     extraLocaleSettings # self-explanatory *string*
+        - ~/modules/core/time.nix
 
 ### Service Variables
 
-    nfsEnable # to enable NFS Service *boolean*
     smbEnable # to enable SMB mount *boolean*
+        - ~/modules/core/services.nix    
 
     tailscaleEnable # to enable tailscale *boolean*
     sshdEnable # to enable openssh *boolean*
+        - ~/modules/core/network.nix
 
 ### Account Variables
 
     sudoNoPswd # sudo without password for user *boolean*
+        - ~/modules/core/users.nix
+
     interfaceStyle # CLI only or with GUI *string*
         - "GUI" | "CLI" 
         - GUI is GUI + CLI otherwise CLI is just CLI
+        - enable GUI or CLI {its for like servers or personal use}
 
 ### CLI Variables / Pkgs
 
@@ -72,11 +77,14 @@
 
     printEnable # to enable printing from this machine *boolean*
     bluetoothEnable # to enable bluetooth from this machine *boolean*
+        - ~/modules/core/services.nix
 
 ### Key Layout
 
     keyboardLayout # self-explanatory *string*
+        - {somewhere in wayland} # to do
     consoleKeyMap # self-explanatory *string*
+        - ~/modules/core/devices.nix
 
 ### Extra Drivers
 
