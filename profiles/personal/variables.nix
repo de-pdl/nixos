@@ -2,6 +2,7 @@
   ### what is the point of all this?
   ### this will affect the core modules / home modules
   ### without having to adjust manually
+  ### read configs.md at home page for more info (more like bs)
 
   # Git Configuration ( For Pulling Software Repos )
   gitUsername = "Ayush Paudel";
@@ -11,22 +12,22 @@
   ## personal services {you may use you may not}
 
   # Enable NFS
-  enableNFS = false;
+  enableNFS = false; # to link
   # Enable SMB
-  enableSMB = false;
+  enableSMB = false; # to link
 
   # Enable Printing Support
-  printEnable = false;
+  printEnable = false; # to link
   # Enable Bluetooth
-  bluetoothEnable = true;
+  bluetoothEnable = true; # to link
 
   # Enable Tailscale
-  tailscaleEnable = true;
+  tailscaleEnable = true; # to link
   # Enable SSH(d)
-  sshdEnable = true;
+  sshdEnable = true; # to link
 
   # sudo with no password
-  sudoNoPswd = true;
+  sudoNoPswd = true; # to link
 
   timeZone = "Australia/Sydeny";
   defaultLocale = "en_US.UTF-8";
@@ -52,11 +53,7 @@
 
   # Set Waybar
   #  Available Options:
-  #waybarChoice = ../../modules/home/waybar/waybar-simple.nix;
-  #waybarChoice = ../../modules/home/waybar/waybar-ddubs.nix;
   waybarChoice = ../../modules/home/waybar/waybar-ddubs-2.nix;
-  #waybarChoice = ../../modules/home/waybar/Jerry-waybar.nix;
-  #waybarChoice = ../../modules/home/waybar/waybar-curved.nix;
 
   # Set Animation style
   # Available options are:
@@ -64,7 +61,7 @@
   # animations-end4.nix (end-4 project)
   # animations-dynamic.nix (ml4w project)
   # animations-moving.nix (ml4w project)
-  animChoice = ../../modules/home/hyprland/animations-def.nix;
+  animChoice = ../../modules/home/hyprland/animations-moving.nix;
 
   # Enable Thunar GUI File Manager
   thunarEnable = true;
