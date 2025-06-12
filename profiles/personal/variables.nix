@@ -16,11 +16,6 @@
   # Enable SMB
   enableSMB = false; # to link
 
-  # Enable Printing Support
-  printEnable = false; # to link
-  # Enable Bluetooth
-  bluetoothEnable = true; # to link
-
   # Enable Tailscale
   tailscaleEnable = true; # to link
   # Enable SSH(d)
