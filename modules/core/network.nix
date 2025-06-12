@@ -1,9 +1,10 @@
 {
-  pkgs,
   machine,
-  options,
+  profile,
   ...
-}: {
+}: let
+  inherit (import ../../profiles/${profile}/variables.nix) tailscaleEnable sshdEnable;
+in {
   networking = {
     hostName = "${machine}";
     networkmanager.enable = true;
@@ -30,9 +31,10 @@
     };
   };
   services.tailscale = {
-    enable = true;
+    enable = tailscaleEnable;
     useRoutingFeatures = "client";
   };
+  services.openssh.enable = sshdEnable;
 
   #change depending on the environment {in profile}
 

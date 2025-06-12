@@ -1,46 +1,49 @@
 {
+  ### what is the point of all this?
+  ### this will affect the core modules / home modules
+  ### without having to adjust manually
+  ### read configs.md at home page for more info (more like bs)
+
   # Git Configuration ( For Pulling Software Repos )
   gitUsername = "Ayush Paudel";
   gitEmail = "83343839+de-pdl@users.noreply.github.com";
 
-  # Hyprland Settings
-  # ex: extraMonitorSettings = "monitor = Virtual-1,1920x1080@60,auto,1";
-  # extraMonitorSettings = "monitor = DP-5, 2560x1440@144,auto,1";
+  ## what are things i want to decide in variables
+  ## personal services {you may use you may not}
 
-  extraMonitorSettings = "
-    monitor = DP-5, 2560x1440@144, auto, 1
-    monitor = DP-4, 1920x1080@144, auto, 1
-    ";
+  smbEnable = true;
 
-  # Waybar Settings
-  clock24h = false;
+  tailscaleEnable = true;
+  sshdEnable = true;
 
+  timeZone = "Australia/Sydney";
+  defaultLocale = "en_US.UTF-8";
+  extraLocaleSettings = "en_US.UTF-8";
+
+  sudoNoPswd = true;
+  #========= to do ===================#
+  interfaceStyle = "GUI"; # or "CLI";
   # Program Options
+
+  # CLI
+
+  terminalMux = "tmux";
+  textEditor = "nvim";
+  terminalFileManager = "yazi";
+
+  # default browser select {for hyprland binds cur}
   browser = "google-chrome-stable"; # Set Default Browser (google-chrome-stable for google-chrome)
-  terminal = "kitty"; # Set Default System Terminal
-  keyboardLayout = "us";
-  consoleKeyMap = "us";
-
-  # For Nvidia Prime support
-  intelID = "PCI:1:0:0";
-  nvidiaID = "PCI:0:2:0";
-
-  # Enable NFS
-  enableNFS = true;
-
-  # Enable Printing Support
-  printEnable = false;
+  terminal = "kitty"; # Set Default System Terminal ## GUI variables
 
   # Set Stylix Image
   stylixImage = ../../wallpapers/AnimeGirlNightSky.jpg;
 
+  # Waybar Settings
+  clock24h = false;
+
   # Set Waybar
   #  Available Options:
-  #waybarChoice = ../../modules/home/waybar/waybar-simple.nix;
-  #waybarChoice = ../../modules/home/waybar/waybar-ddubs.nix;
   waybarChoice = ../../modules/home/waybar/waybar-ddubs-2.nix;
-  #waybarChoice = ../../modules/home/waybar/Jerry-waybar.nix;
-  #waybarChoice = ../../modules/home/waybar/waybar-curved.nix;
 
   # Set Animation style
   # Available options are:
@@ -48,7 +51,7 @@
   # animations-end4.nix (end-4 project)
   # animations-dynamic.nix (ml4w project)
   # animations-moving.nix (ml4w project)
-  animChoice = ../../modules/home/hyprland/animations-def.nix;
+  animChoice = ../../modules/home/hyprland/animations-moving.nix;
 
   # Enable Thunar GUI File Manager
   thunarEnable = true;

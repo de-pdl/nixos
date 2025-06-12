@@ -1,6 +1,6 @@
-{profile, ...}: let
+{machine, ...}: let
   inherit
-    (import ../../../profiles/${profile}/variables.nix)
+    (import ../../../machines/${machine}/variables.nix)
     extraMonitorSettings
     ;
 in {

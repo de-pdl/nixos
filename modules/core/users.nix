@@ -6,7 +6,7 @@
   profile,
   ...
 }: let
-  inherit (import ../../profiles/${profile}/variables.nix) gitUsername;
+  inherit (import ../../profiles/${profile}/variables.nix) gitUsername sudoNoPswd;
 in {
   imports = [inputs.home-manager.nixosModules.home-manager];
   home-manager = {
@@ -45,15 +45,19 @@ in {
   nix.settings.allowed-users = ["${username}"];
 
   # no password with sudo
-  security.sudo.extraRules = [
-    {
-      users = ["${username}"];
-      commands = [
-        {
-          command = "ALL";
-          options = ["NOPASSWD"];
-        }
-      ];
-    }
-  ];
+
+  security.sudo.extraRules =
+    if sudoNoPswd == true
+    then [
+      {
+        users = ["${username}"];
+        commands = [
+          {
+            command = "ALL";
+            options = ["NOPASSWD"];
+          }
+        ];
+      }
+    ]
+    else [];
 }
