@@ -28,8 +28,7 @@
     sudoNoPswd # sudo without password for user *boolean*
         - ~/modules/core/users.nix
 
-    interfaceStyle # CLI only or with GUI *string*
-        - "GUI" | "CLI" 
+    guiEnable # CLI only or with GUI *boolean*
         - GUI is GUI + CLI otherwise CLI is just CLI
         - enable GUI or CLI {its for like servers or personal use}
 
@@ -59,9 +58,13 @@
         - let it either be a pkg from nix
         - or "null"
 
-    brower # default browser *string*
-    thunarEnable # enable thunar *boolean*
     terminal # terminal emulator *string*
+    gtextEditor # text editor with gui *string*
+    fileManager # file manager *string* {move thunarEnable}
+
+    browser # default browser *string*
+    thunarEnable # enable thunar *boolean*
+
 
     stylixImage # background for stylix *path*
     clock24h # waybar clock setting *boolean*

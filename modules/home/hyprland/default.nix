@@ -1,5 +1,5 @@
 {profile, ...}: let
-  inherit (import ../../../profiles/${profile}/variables.nix) animChoice;
+  inherit (import ../../../profiles/${profile}/variables.nix {}) animChoice;
 in {
   imports = [
     animChoice

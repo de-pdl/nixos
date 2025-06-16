@@ -1,5 +1,5 @@
 {profile, ...}: let
-  inherit (import ../../profiles/${profile}/variables.nix) waybarChoice;
+  inherit (import ../../profiles/${profile}/variables.nix {}) waybarChoice;
 in {
   imports = [
     #../../modules/home/amfora.nix

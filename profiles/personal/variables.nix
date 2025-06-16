@@ -1,4 +1,4 @@
-{
+{pkgs ? import <nixpkgs> {}}: {
   ### what is the point of all this?
   ### this will affect the core modules / home modules
   ### without having to adjust manually
@@ -22,18 +22,26 @@
 
   sudoNoPswd = true;
   #========= to do ===================#
-  interfaceStyle = "GUI"; # or "CLI";
+  guiEnable = true; # or "CLI";
   # Program Options
 
   # CLI
 
-  terminalMux = "tmux";
-  textEditor = "nvim";
-  terminalFileManager = "yazi";
+  terminalMux = pkgs.tmux;
+  textEditor = pkgs.neovim;
+  terminalFileManager = pkgs.yazi;
+
+  # GUI
 
   # default browser select {for hyprland binds cur}
-  browser = "google-chrome-stable"; # Set Default Browser (google-chrome-stable for google-chrome)
-  terminal = "kitty"; # Set Default System Terminal ## GUI variables
+  terminal = pkgs.kitty; # Set Default System Terminal ## GUI variables
+  gtextEditor = pkgs.vscode;
+  fileManager = pkgs.xfce.thunar;
+  browser = pkgs.google-chrome;
+
+  hyprTerminal = "kitty";
+  hyprBrowser = "google-chrome"; # Set Default Browser (google-chrome-stable for google-chrome)
+  #thunarEnable = true;
 
   # Set Stylix Image
   stylixImage = ../../wallpapers/AnimeGirlNightSky.jpg;
@@ -52,7 +60,4 @@
   # animations-dynamic.nix (ml4w project)
   # animations-moving.nix (ml4w project)
   animChoice = ../../modules/home/hyprland/animations-moving.nix;
-
-  # Enable Thunar GUI File Manager
-  thunarEnable = true;
 }

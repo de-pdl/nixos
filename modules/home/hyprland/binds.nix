@@ -1,19 +1,19 @@
 {profile, ...}: let
   inherit
-    (import ../../../profiles/${profile}/variables.nix)
-    browser
-    terminal
+    (import ../../../profiles/${profile}/variables.nix {})
+    hyprBrowser
+    hyprTerminal
     ;
 in {
   wayland.windowManager.hyprland.settings = {
     bind = [
-      "$modifier,Return,exec,${terminal}"
+      "$modifier,Return,exec,${hyprTerminal}"
       "$modifier,K,exec,list-keybinds"
       "$modifier SHIFT,Return,exec,rofi-launcher"
       "$modifier SHIFT,W,exec,web-search"
       "$modifier ALT,W,exec,wallsetter"
       "$modifier SHIFT,N,exec,swaync-client -rs"
-      "$modifier,W,exec,${browser}"
+      "$modifier,W,exec,${hyprBrowser}"
       "$modifier,Y,exec,kitty -e yazi"
       "$modifier,E,exec,thunar"
       "$modifier,S,exec,screenshootin"

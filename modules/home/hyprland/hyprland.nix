@@ -6,7 +6,7 @@
   ...
 }: let
   inherit
-    (import ../../../profiles/${profile}/variables.nix)
+    (import ../../../profiles/${profile}/variables.nix {})
     stylixImage
     ;
   inherit

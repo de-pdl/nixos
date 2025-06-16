@@ -3,7 +3,7 @@
   profile,
   ...
 }: let
-  inherit (import ../../profiles/${profile}/variables.nix) tailscaleEnable sshdEnable;
+  inherit (import ../../profiles/${profile}/variables.nix {}) tailscaleEnable sshdEnable;
 in {
   networking = {
     hostName = "${machine}";
