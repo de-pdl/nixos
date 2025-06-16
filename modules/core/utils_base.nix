@@ -40,6 +40,7 @@ in {
       findutils
       ripgrep
       bash
+      gping
 
       terminalMux
       textEditor

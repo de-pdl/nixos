@@ -1,6 +1,6 @@
 {pkgs, ...}: {
   environment.systemPackages = with pkgs; [
-    vim
+    socat
   ];
   boot.initrd.systemd.dbus.enable = true; #check to remove
 }
