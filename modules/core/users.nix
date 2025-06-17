@@ -6,7 +6,7 @@
   profile,
   ...
 }: let
-  inherit (import ../../profiles/${profile}/variables.nix) gitUsername sudoNoPswd;
+  inherit (import ../../profiles/${profile}/variables.nix {}) gitUsername sudoNoPswd;
 in {
   imports = [inputs.home-manager.nixosModules.home-manager];
   home-manager = {

@@ -26,7 +26,7 @@
         "break"
         {
           type = "os";
-          key = "OS - ZaneyOS v2.3.2";
+          key = "OS - pixdel v1.0.1";
           keyColor = "31";
         }
         {

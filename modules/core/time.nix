@@ -1,6 +1,6 @@
 {profile, ...}: let
   inherit
-    (import ../../profiles/${profile}/variables.nix)
+    (import ../../profiles/${profile}/variables.nix {})
     timeZone
     defaultLocale
     extraLocaleSettings
