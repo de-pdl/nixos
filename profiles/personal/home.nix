@@ -19,6 +19,7 @@ in {
     ../../modules/home/scripts
     ../../modules/home/swappy.nix
     ../../modules/home/swaync.nix
+    #waybarChoice
     waybarChoice
     ../../modules/home/wlogout
     ../../modules/home/xdg.nix
