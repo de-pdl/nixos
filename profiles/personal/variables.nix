@@ -44,7 +44,7 @@
   #thunarEnable = true;
 
   # Set Stylix Image
-  stylixImage = ../../wallpapers/AnimeGirlNightSky.jpg;
+  stylixImage = ../../wallpapers/1369866.png;
 
   # Waybar Settings
   clock24h = false;

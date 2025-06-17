@@ -27,7 +27,7 @@ in {
     #   base0E = "b45bcf";
     #   base0F = "00f769";
     # };
-    polarity = "dark";
+    polarity = "light";
     opacity.terminal = 1.0;
     cursor = {
       package = pkgs.bibata-cursors;
