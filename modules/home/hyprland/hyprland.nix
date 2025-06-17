@@ -6,10 +6,6 @@
   ...
 }: let
   inherit
-    (import ../../../profiles/${profile}/variables.nix {})
-    stylixImage
-    ;
-  inherit
     (import ../../../machines/${machine}/variables.nix)
     extraMonitorSettings
     keyboardLayout
@@ -60,7 +56,6 @@ in {
         "killall -q swaync;sleep .5 && swaync"
         "nm-applet --indicator"
         "pypr &"
-        "sleep 1.5 && swww img ${stylixImage}"
       ];
 
       input = {
@@ -99,8 +94,6 @@ in {
         gaps_out = 8;
         border_size = 2;
         resize_on_border = true;
-        "col.active_border" = "rgb(${config.lib.stylix.colors.base08}) rgb(${config.lib.stylix.colors.base0C}) 45deg";
-        "col.inactive_border" = "rgb(${config.lib.stylix.colors.base01})";
       };
 
       misc = {

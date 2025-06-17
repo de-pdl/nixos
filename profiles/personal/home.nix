@@ -17,7 +17,6 @@ in {
     ../../modules/home/rofi
     ../../modules/home/qt.nix
     ../../modules/home/scripts
-    ../../modules/home/stylix.nix
     ../../modules/home/swappy.nix
     ../../modules/home/swaync.nix
     waybarChoice

@@ -8,6 +8,5 @@
     ./time.nix
     ./utils_base.nix
     ./users.nix
-    ./stylix.nix
   ];
 }
