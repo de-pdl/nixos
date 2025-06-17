@@ -1,9 +1,5 @@
 # modules/core/pkg-management.nix
-{
-  config,
-  pkgs,
-  ...
-}: {
+{...}: {
   # Nix is built-in; ensure flakes are enabled
   nix = {
     settings = {

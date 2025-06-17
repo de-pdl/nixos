@@ -1,14 +1,7 @@
-{profile, ...}: let
-  inherit
-    (import ../../profiles/${profile.name}/variables.nix {})
-    timeZone
-    defaultLocale
-    extraLocaleSettings
-    ;
-in {
-  time.timeZone = timeZone;
-  i18n.defaultLocale = defaultLocale;
-  i18n.extraLocaleSettings = {
+{profile, ...}: {
+  time.timeZone = profile.timeZone;
+  i18n.defaultLocale = profile.defaultLocale;
+  i18n.extraLocaleSettings = with profile; {
     LC_ADDRESS = extraLocaleSettings;
     LC_IDENTIFICATION = extraLocaleSettings;
     LC_MEASUREMENT = extraLocaleSettings;

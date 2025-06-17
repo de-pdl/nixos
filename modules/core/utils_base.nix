@@ -42,16 +42,16 @@ in {
       bash
       gping
 
-      terminalMux
-      textEditor
-      terminalFileManager
+      profile.terminalMux
+      profile.textEditor
+      profile.terminalFileManager
     ];
 
-    guiPkgs = lib.optionalAttrs guiEnable [
-      terminal
-      gtextEditor
-      fileManager
-      browser
+    guiPkgs = lib.optionalAttrs profile.guiEnable [
+      profile.terminal
+      profile.gtextEditor
+      profile.fileManager
+      profile.browser
     ];
   in
     fixedPkgs ++ guiPkgs;
