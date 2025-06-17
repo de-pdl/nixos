@@ -5,7 +5,7 @@
   ...
 }: let
   inherit
-    (import ../../profiles/${profile}/variables.nix {inherit pkgs;})
+    (import ../../profiles/${profile.name}/variables.nix {inherit pkgs;})
     guiEnable
     terminalMux
     textEditor
@@ -20,7 +20,7 @@ in {
   programs = {
     dconf.enable = true; #gnome config
 
-    hyprland.enable = guiEnable; #change this to depend on gui config
+    hyprland.enable = profile.guiEnable; #change this to depend on gui config
     hyprlock.enable = true;
 
     mtr.enable = true;

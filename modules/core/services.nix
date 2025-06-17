@@ -4,7 +4,7 @@
   pkgs,
   ...
 }: let
-  inherit (import ../../profiles/${profile}/variables.nix {}) smbEnable;
+  inherit (import ../../profiles/${profile.name}/variables.nix {}) smbEnable;
   inherit
     (import ../../machines/${machine}/variables.nix)
     bluetoothEnable
