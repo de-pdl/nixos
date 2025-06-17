@@ -1,4 +1,8 @@
-{pkgs, ...}: {
+{
+  pkgs,
+  profile,
+  ...
+}: {
   boot = {
     loader.systemd-boot.enable = true;
 
@@ -8,4 +12,5 @@
     kernelPackages = pkgs.linuxPackages_latest;
     initrd.kernelModules = ["xhci_pci" "ahci"];
   };
+  services.displayManager.ly.enable = true;
 }
