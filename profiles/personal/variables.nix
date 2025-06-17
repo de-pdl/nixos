@@ -48,22 +48,23 @@
 
   # Color Scheme {katy by Georege Essig}
   background = ../../wallpapers/1369866.png;
-  base00 = "282c34";
-  base01 = "2c323b";
-  base02 = "3e4451";
-  base03 = "665c54";
-  base04 = "928374";
-  base05 = "a89984";
-  base06 = "d5c4a1";
-  base07 = "fdf4c1";
-  base08 = "83a598";
-  base09 = "a07e3b";
-  base0A = "a07e3b";
-  base0B = "528b8b";
-  base0C = "83a598";
-  base0D = "83a598";
-  base0E = "d75f5f";
-  base0F = "a87322";
+
+  base00 = "1d1f21";
+  base01 = "282a2e";
+  base02 = "373b41";
+  base03 = "969896";
+  base04 = "b4b7b4";
+  base05 = "c5c8c6";
+  base06 = "e0e0e0";
+  base07 = "ffffff";
+  base08 = "cc6666";
+  base09 = "de935f";
+  base0A = "f0c674";
+  base0B = "b5bd68";
+  base0C = "8abeb7";
+  base0D = "81a2be";
+  base0E = "b294bb";
+  base0F = "a3685a";
 
   # Waybar Settings
   clock24h = false;

@@ -21,21 +21,22 @@
     nixosConfigurations = {
       surface = let
         system = "x86_64-linux";
-        pkgs = import nixpkgs {inherit system;};
         profileName = "personal";
-        profileVars = import ./profiles/${profileName}/variables.nix {inherit pkgs;};
-        profile = profileVars // {name = profileName;};
-
         username = "ayush";
         machine = "surface";
       in
         nixpkgs.lib.nixosSystem {
           inherit system;
           specialArgs = {
-            inherit inputs profile username machine;
+            inherit inputs username machine;
           };
           modules = [
-            ./profiles/${profile.name}
+            ({pkgs, ...}: {
+              _module.args = {
+                profile = (import ./profiles/${profileName}/variables.nix {inherit pkgs;}) // {name = profileName;};
+              };
+            })
+            ./profiles/${profileName}
           ];
         };
     };

@@ -3,20 +3,7 @@
   pkgs,
   lib,
   ...
-}: let
-  inherit
-    (import ../../profiles/${profile.name}/variables.nix {inherit pkgs;})
-    guiEnable
-    terminalMux
-    textEditor
-    terminalFileManager
-    terminal
-    gtextEditor
-    fileManager
-    browser
-    ;
-  # fix it in the future
-in {
+}: {
   programs = {
     dconf.enable = true; #gnome config
 

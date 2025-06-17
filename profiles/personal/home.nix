@@ -1,4 +1,8 @@
-{profile, ...}:
+{
+  profile,
+  pkgs,
+  ...
+}:
 #let
 #inherit (import ../../profiles/${profile.name}/variables.nix {}) waybarChoice;
 #in

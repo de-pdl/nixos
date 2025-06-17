@@ -4,7 +4,6 @@
   pkgs,
   ...
 }: let
-  inherit (import ../../profiles/${profile.name}/variables.nix {}) smbEnable;
   inherit
     (import ../../machines/${machine}/variables.nix)
     bluetoothEnable
@@ -49,7 +48,7 @@ in {
     };
 
   environment.systemPackages = with pkgs;
-    if smbEnable == true
+    if profile.smbEnable == true
     then [cifs-utils]
     else [];
 }
