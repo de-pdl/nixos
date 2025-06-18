@@ -20,5 +20,7 @@
     pavucontrol # For Editing Audio Levels & Devices
 
     socat # Needed For Screenshots
+
+    xournalpp
   ];
 }
