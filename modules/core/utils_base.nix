@@ -35,12 +35,12 @@
       profile.terminalFileManager
     ];
 
-    guiPkgs = lib.optionalAttrs profile.guiEnable [
+    guiPkgs = if profile.guiEnable then [
       profile.terminal
       profile.gtextEditor
       profile.fileManager
       profile.browser
-    ];
+    ] else [];
   in
     fixedPkgs ++ guiPkgs;
 }
