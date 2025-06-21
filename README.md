@@ -6,15 +6,12 @@ suggestions.
 
 > Credit to Zaneyos for the starting point
 
-Version Counter : 3
+Version Counter : 4
 
-
-
-Starting Point : flake.nix
-    - Import profile
-    - Import machine
+Starting Point : flake.nix - Import profile - Import machine
 
 ## Intention of this flake Style
+
     Profiles should be configured as your needs changes but if you ever decide to change hardware, then
     that profile should still work without doing anything except changing the machine nix files.
 
@@ -27,6 +24,7 @@ Starting Point : flake.nix
     utilising nixos and docker more and as much as people like to os hop, I would rather not. ( i means its debian for most lxc and most of time its preconfigured shit but when i want to further configure than it becomes a pain in the ass cuz it aint version controlled or whatever )
 
 ## Folder Hierachy
+
     ╰──> 📄 flake.nix
     ╰──> 📁 modules
     │   ╰──> 📁 home
@@ -73,6 +71,12 @@ Starting Point : flake.nix
 
 > Flake.nix considertions: passthrough "machine" "profile" and "username"
 
-### Author's Note 
-If you have any questions, Goodluck I dont know either <3. You can send it to de.bored.21@gmail.com but I will not be able to guarantee that I know the way. 
->Also PS if your from sydney I need a job please (y2 at UNI). Studying Electrical but like money is money and I've got (some sort of) IT / Software (uh homelab) experience.
+### Author's Note
+
+If you have any questions, Goodluck I dont know either <3. You can send it to
+de.bored.21@gmail.com but I will not be able to guarantee that I know the way.
+
+> Also PS if your from sydney I need a job please (y2 at UNI). Studying
+> Electrical but like money is money and I've got (some sort of) IT / Software
+> (uh homelab) experience.
+
