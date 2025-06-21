@@ -1,6 +1,7 @@
 {
   pkgs,
   config,
+  profile,
   ...
 }: {
   programs = {
@@ -21,15 +22,15 @@
         inherit (config.lib.formats.rasi) mkLiteral;
       in {
         "*" = {
-          #bg = mkLiteral "#${config.stylix.base16Scheme.base00}";
-          #bg-alt = mkLiteral "#${config.stylix.base16Scheme.base09}";
-          #foreground = mkLiteral "#${config.stylix.base16Scheme.base01}";
-          #selected = mkLiteral "#${config.stylix.base16Scheme.base08}";
-          #active = mkLiteral "#${config.stylix.base16Scheme.base0B}";
-          #text-selected = mkLiteral "#${config.stylix.base16Scheme.base00}";
-          #text-color = mkLiteral "#${config.stylix.base16Scheme.base05}";
-          #border-color = mkLiteral "#${config.stylix.base16Scheme.base0F}";
-          #urgent = mkLiteral "#${config.stylix.base16Scheme.base0E}";
+          bg = mkLiteral "#${profile.base00}";
+          bg-alt = mkLiteral "#${profile.base09}";
+          foreground = mkLiteral "#${profile.base01}";
+          selected = mkLiteral "#${profile.base08}";
+          active = mkLiteral "#${profile.base0B}";
+          text-selected = mkLiteral "#${profile.base00}";
+          text-color = mkLiteral "#${profile.base05}";
+          border-color = mkLiteral "#${profile.base0F}";
+          urgent = mkLiteral "#${profile.base0E}";
         };
         "window" = {
           transparency = "real";
@@ -57,7 +58,7 @@
         "imagebox" = {
           padding = mkLiteral "20px";
           background-color = mkLiteral "transparent";
-          background-image = mkLiteral ''url("~/Pictures/Wallpapers/Rainnight.jpg", height)'';
+          background-image = mkLiteral ''url("~/Pictures/Wallpapers/summer-anime-cat-girl.jpg", height)'';
           orientation = mkLiteral "vertical";
           children = map mkLiteral [
             "inputbar"

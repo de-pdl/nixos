@@ -3,24 +3,11 @@
   pkgs,
   lib,
   ...
-}: let
-  inherit
-    (import ../../profiles/${profile}/variables.nix {inherit pkgs;})
-    guiEnable
-    terminalMux
-    textEditor
-    terminalFileManager
-    terminal
-    gtextEditor
-    fileManager
-    browser
-    ;
-  # fix it in the future
-in {
+}: {
   programs = {
     dconf.enable = true; #gnome config
 
-    hyprland.enable = guiEnable; #change this to depend on gui config
+    hyprland.enable = profile.guiEnable; #change this to depend on gui config
     hyprlock.enable = true;
 
     mtr.enable = true;
@@ -29,9 +16,10 @@ in {
 
   environment.systemPackages = with pkgs; let
     fixedPkgs = [
-      htop
+      brightnessctl
       docker-compose
       duf
+      htop
       unrar
       unzip
       usbutils
@@ -42,16 +30,16 @@ in {
       bash
       gping
 
-      terminalMux
-      textEditor
-      terminalFileManager
+      profile.terminalMux
+      profile.textEditor
+      profile.terminalFileManager
     ];
 
-    guiPkgs = lib.optionalAttrs guiEnable [
-      terminal
-      gtextEditor
-      fileManager
-      browser
+    guiPkgs = lib.optionalAttrs profile.guiEnable [
+      profile.terminal
+      profile.gtextEditor
+      profile.fileManager
+      profile.browser
     ];
   in
     fixedPkgs ++ guiPkgs;

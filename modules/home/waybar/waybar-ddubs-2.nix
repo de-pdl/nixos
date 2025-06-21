@@ -2,23 +2,27 @@
   pkgs,
   config,
   lib,
+  profile,
   ...
 }: let
   terminal = "kitty";
-  base00 = "0F1419";
-  base01 = "131721";
-  base03 = "3E4B59";
-  base05 = "E6E1CF";
-  base06 = "E6E1CF";
-  base07 = "F3F4F5";
-  base08 = "F07178";
-  base09 = "FF8F40";
-  base0A = "FFB454";
-  base0B = "B8CC52";
-  base0C = "95E6CB";
-  base0D = "59C2FF";
-  base0E = "D2A6FF";
-  base0F = "E6B673";
+
+  base00 = profile.base00;
+  base01 = profile.base01;
+  base02 = profile.base02;
+  base03 = profile.base03;
+  base04 = profile.base04;
+  base05 = profile.base05;
+  base06 = profile.base06;
+  base07 = profile.base07;
+  base08 = profile.base08;
+  base09 = profile.base09;
+  base0A = profile.base0A;
+  base0B = profile.base0B;
+  base0C = profile.base0C;
+  base0D = profile.base0D;
+  base0E = profile.base0E;
+  base0F = profile.base0F;
 in
   with lib; {
     # Configure & Theme Waybar

@@ -17,30 +17,6 @@
       enableLuaLoader = true;
       preventJunkFiles = true;
 
-      theme = {
-        enable = true;
-        name = "base16";
-        transparent = false;
-        base16-colors = {
-          base00 = "#${profile.base00}";
-          base01 = "#${profile.base01}";
-          base02 = "#${profile.base02}";
-          base03 = "#${profile.base03}";
-          base04 = "#${profile.base04}";
-          base05 = "#${profile.base05}";
-          base06 = "#${profile.base06}";
-          base07 = "#${profile.base07}";
-          base08 = "#${profile.base08}";
-          base09 = "#${profile.base09}";
-          base0A = "#${profile.base0A}";
-          base0B = "#${profile.base0B}";
-          base0C = "#${profile.base0C}";
-          base0D = "#${profile.base0D}";
-          base0E = "#${profile.base0E}";
-          base0F = "#${profile.base0F}";
-        };
-      };
-
       options = {
         tabstop = 4;
         shiftwidth = 2;

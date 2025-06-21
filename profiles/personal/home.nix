@@ -1,6 +1,12 @@
-{profile, ...}: let
-  inherit (import ../../profiles/${profile}/variables.nix {}) waybarChoice;
-in {
+{
+  profile,
+  pkgs,
+  ...
+}:
+#let
+#inherit (import ../../profiles/${profile.name}/variables.nix {}) waybarChoice;
+#in
+{
   imports = [
     ../../modules/home/bash.nix
     ../../modules/home/bashrc-personal.nix
@@ -20,7 +26,7 @@ in {
     ../../modules/home/swappy.nix
     ../../modules/home/swaync.nix
     #waybarChoice
-    waybarChoice
+    profile.waybarChoice
     ../../modules/home/wlogout
     ../../modules/home/xdg.nix
     ../../modules/home/yazi

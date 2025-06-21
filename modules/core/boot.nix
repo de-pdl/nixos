@@ -1,6 +1,6 @@
 {
-  config,
   pkgs,
+  profile,
   ...
 }: {
   boot = {
@@ -12,4 +12,5 @@
     kernelPackages = pkgs.linuxPackages_latest;
     initrd.kernelModules = ["xhci_pci" "ahci"];
   };
+  services.displayManager.ly.enable = true;
 }

@@ -5,9 +5,7 @@
   machine,
   profile,
   ...
-}: let
-  inherit (import ../../profiles/${profile}/variables.nix {}) gitUsername sudoNoPswd;
-in {
+}: {
   imports = [inputs.home-manager.nixosModules.home-manager];
   home-manager = {
     useUserPackages = true;
@@ -15,7 +13,7 @@ in {
     backupFileExtension = "backup";
     extraSpecialArgs = {inherit inputs username machine profile;};
     users.${username} = {
-      imports = [../../profiles/${profile}/home.nix];
+      imports = [../../profiles/${profile.name}/home.nix];
       home = {
         username = "${username}";
         homeDirectory = "/home/${username}";
@@ -26,7 +24,7 @@ in {
   users.mutableUsers = true;
   users.users.${username} = {
     isNormalUser = true;
-    description = "${gitUsername}";
+    description = "${profile.gitUsername}";
     extraGroups = [
       "adbusers"
       "docker"
@@ -47,7 +45,7 @@ in {
   # no password with sudo
 
   security.sudo.extraRules =
-    if sudoNoPswd == true
+    if profile.sudoNoPswd == true
     then [
       {
         users = ["${username}"];

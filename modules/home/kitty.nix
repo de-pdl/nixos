@@ -1,4 +1,8 @@
-{pkgs, ...}: {
+{
+  pkgs,
+  profile,
+  ...
+}: {
   programs.kitty = {
     enable = true;
     package = pkgs.kitty;
@@ -21,6 +25,30 @@
       enabled_layouts = "splits";
     };
     extraConfig = ''
+      background #${profile.base00}
+      foreground #${profile.base05}
+      selection_background #${profile.base02}
+      selection_foreground #${profile.base07}
+      cursor #${profile.base05}
+      cursor_text_color #${profile.base00}
+
+      color0  #${profile.base00}
+      color1  #${profile.base08}
+      color2  #${profile.base0B}
+      color3  #${profile.base0A}
+      color4  #${profile.base0D}
+      color5  #${profile.base0E}
+      color6  #${profile.base0C}
+      color7  #${profile.base05}
+
+      color8  #${profile.base03}
+      color9  #${profile.base08}
+      color10 #${profile.base0B}
+      color11 #${profile.base0A}
+      color12 #${profile.base0D}
+      color13 #${profile.base0E}
+      color14 #${profile.base0C}
+      color15 #${profile.base07}
 
       # Clipboard
       map ctrl+shift+v        paste_from_selection
