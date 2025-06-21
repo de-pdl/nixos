@@ -16,9 +16,10 @@
 
   environment.systemPackages = with pkgs; let
     fixedPkgs = [
-      htop
+      brightnessctl
       docker-compose
       duf
+      htop
       unrar
       unzip
       usbutils

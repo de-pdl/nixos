@@ -21,4 +21,7 @@
   fonts.packages = with pkgs; [
     nerd-fonts.jetbrains-mono
   ];
+
+  # android
+  virtualisation.waydroid.enable = false;
 }
