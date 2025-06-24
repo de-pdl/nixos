@@ -9,6 +9,7 @@
     ./profile-pkgs.nix
     ./drivers.nix
     #./home.nix
+    ./network
   ];
 
   drivers.amdgpu.enable = false;
