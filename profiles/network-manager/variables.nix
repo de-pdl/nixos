@@ -1,4 +1,4 @@
-{pkgs ? import <nixpkgs> {}}: {
+{pkgs}: {
   ### what is the point of all this?
   ### this will affect the core modules / home modules
   ### without having to adjust manually

@@ -40,26 +40,25 @@
           ];
         };
 
-        network = let
-		system = "x86_64-linux";
-		profileName = "network-manager";
-		username = "ayush";
-		machine = "pmx-network";
-	in
-	  nixpkgs.lib.nixosSystem {
-		inherit system;
-		specialArgs = {
-			inherit inputs username machine;
-		};	
-          	modules = [
-            	({pkgs, ...}: {
-              	_module.args = {
-                profile = (import ./profiles/${profileName}/variables.nix {inherit pkgs;}) // {name = profileName;};
-              	};
-            	})
-            	./profiles/${profileName}
-          	];
-	};
-      };
+      network = let
+        system = "x86_64-linux";
+        profileName = "network-manager";
+        username = "ayush";
+        machine = "pmx-network";
+      in
+        nixpkgs.lib.nixosSystem {
+          inherit system;
+          specialArgs = {
+            inherit inputs username machine;
+            profile = let
+              pkgs = import nixpkgs {inherit system;};
+            in
+              (import ./profiles/${profileName}/variables.nix {inherit pkgs;}) // {name = profileName;};
+          };
+          modules = [
+            ./profiles/${profileName}
+          ];
+        };
+    };
   };
 }

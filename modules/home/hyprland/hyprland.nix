@@ -1,7 +1,6 @@
 {
   profile,
   machine,
-  config,
   pkgs,
   ...
 }: let
@@ -34,7 +33,7 @@ in {
     ".config/face.jpg".source = ./face_fog.png;
   };
   wayland.windowManager.hyprland = {
-    enable = true;
+    enable = profile.guiEnable;
     package = pkgs.hyprland;
     systemd = {
       enable = true;
@@ -42,7 +41,7 @@ in {
       variables = ["--all"];
     };
     xwayland = {
-      enable = true;
+      enable = profile.guiEnable;
     };
     settings = {
       exec-once = [
