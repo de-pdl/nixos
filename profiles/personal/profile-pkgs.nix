@@ -10,6 +10,8 @@
 
     networkmanagerapplet
 
+    bambu-studio
+
     appimage-run # Needed For AppImage Support
 
     docker-compose # Allows Controlling Docker From A Single File
