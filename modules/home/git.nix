@@ -1,9 +1,7 @@
-{profile, ...}: let
-  inherit (import ../../profiles/${profile.name}/variables.nix {}) gitUsername gitEmail;
-in {
+{profile, ...}: {
   programs.git = {
     enable = true;
-    userName = "${gitUsername}";
-    userEmail = "${gitEmail}";
+    userName = profile.gitUsername;
+    userEmail = profile.gitEmail;
   };
 }

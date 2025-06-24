@@ -29,18 +29,22 @@
       ripgrep
       bash
       gping
+      font-awesome
 
       profile.terminalMux
       profile.textEditor
       profile.terminalFileManager
     ];
 
-    guiPkgs = if profile.guiEnable then [
-      profile.terminal
-      profile.gtextEditor
-      profile.fileManager
-      profile.browser
-    ] else [];
+    guiPkgs =
+      if profile.guiEnable
+      then [
+        profile.terminal
+        profile.gtextEditor
+        profile.fileManager
+        profile.browser
+      ]
+      else [];
   in
     fixedPkgs ++ guiPkgs;
 }

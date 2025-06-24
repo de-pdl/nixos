@@ -17,6 +17,7 @@ in {
     gvfs.enable = true; # For Mounting USB & More
     tumbler.enable = true; # Image/video preview
 
+    xserver.enable = profile.guiEnable;
     blueman.enable = bluetoothEnable; # Bluetooth Support
     printing.enable = printEnable;
     #gnome.gnome-keyring.enable = true;
