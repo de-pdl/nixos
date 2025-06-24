@@ -40,7 +40,7 @@
   browser = pkgs.google-chrome;
 
   hyprTerminal = "kitty";
-  hyprBrowser = "google-chrome"; # Set Default Browser (google-chrome-stable for google-chrome)
+  hyprBrowser = "google-chrome-stable"; # Set Default Browser (google-chrome-stable for google-chrome)
   #thunarEnable = true;
 
   # Set Stylix Image
