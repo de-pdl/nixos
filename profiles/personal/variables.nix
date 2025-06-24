@@ -22,7 +22,7 @@
 
   sudoNoPswd = true;
   #========= to do ===================#
-  guiEnable = true; # or "CLI";
+  guiEnable = true; # need to configure GUI vs CLI stuff
   # Program Options
 
   # CLI
