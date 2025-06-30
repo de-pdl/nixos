@@ -3,7 +3,9 @@
     google-chrome
     discord
     obsidian
+
     spotify
+
     remmina
     bitwarden-desktop
     teams-for-linux

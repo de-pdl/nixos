@@ -9,6 +9,8 @@
     };
     nixpkgs.url = "github:nixos/nixpkgs/nixos-25.05";
 
+    nixos-hardware.url = "github:NixOS/nixos-hardware/master";
+
     nvf.url = "github:notashelf/nvf";
     stylix.url = "github:danth/stylix/release-25.05";
     sops-nix = {
@@ -17,7 +19,11 @@
     };
   };
 
-  outputs = {nixpkgs, ...} @ inputs: {
+  outputs = {
+    nixpkgs,
+    nixos-hardware,
+    ...
+  } @ inputs: {
     nixosConfigurations = {
       surface = let
         system = "x86_64-linux";
@@ -29,14 +35,17 @@
           inherit system;
           specialArgs = {
             inherit inputs username machine;
+            profile = let
+              pkgs = import nixpkgs {
+                inherit system;
+                config.allowUnfree = true;
+              };
+            in
+              (import ./profiles/${profileName}/variables.nix {inherit pkgs;}) // {name = profileName;};
           };
           modules = [
-            ({pkgs, ...}: {
-              _module.args = {
-                profile = (import ./profiles/${profileName}/variables.nix {inherit pkgs;}) // {name = profileName;};
-              };
-            })
             ./profiles/${profileName}
+            nixos-hardware.nixosModules.microsoft-surface-laptop-amd
           ];
         };
 
