@@ -18,6 +18,7 @@
         "GDK_SCALE,1"
         "QT_SCALE_FACTOR,1"
         "EDITOR,nvim"
+        "ELECTRON_OZONE_PLATFORM_HINT,wayland"
       ];
     };
   };

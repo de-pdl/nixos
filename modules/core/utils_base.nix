@@ -31,6 +31,15 @@
       gping
       font-awesome
 
+      ffmpeg
+      jq
+      poppler
+      fd
+      fzf
+      zoxide
+      resvg
+      imagemagick
+
       profile.terminalMux
       profile.textEditor
       profile.terminalFileManager
