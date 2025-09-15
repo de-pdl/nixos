@@ -33,6 +33,8 @@
     sage
 
     qutebrowser
+
+    quickemu
   ];
 
   virtualisation.docker = {
