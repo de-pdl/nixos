@@ -4,7 +4,7 @@
   ...
 }: {
   programs = {
-    dconf.enable = true; #gnome config
+    #dconf.enable = true; #gnome config
 
     hyprland.enable = profile.guiEnable; #change this to depend on gui config
     hyprlock.enable = true;

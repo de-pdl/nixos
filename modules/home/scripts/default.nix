@@ -1,6 +1,7 @@
 {
   pkgs,
   username,
+  config,
   ...
 }: {
   home.packages = [
@@ -17,6 +18,8 @@
     (import ./rofi-launcher.nix {inherit pkgs;})
     (import ./screenshootin.nix {inherit pkgs;})
 
-    (import ./mnt-ayush.nix {inherit pkgs;})
+    (import ./mnt-ayush.nix {
+      inherit pkgs;
+    })
   ];
 }
