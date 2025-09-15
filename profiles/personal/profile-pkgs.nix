@@ -31,6 +31,8 @@
 
     xournalpp
     sage
+
+    qutebrowser
   ];
 
   virtualisation.docker = {

@@ -25,4 +25,9 @@
     # …your other Hyprland config…
     exec-once = "/etc/hypr/monitor-hook.sh"
   '';
+  environment.sessionVariables = {
+    EDITOR = "nvim";
+    #BROWSER = "firefox";
+    TERMINAL = "kitty";
+  };
 }

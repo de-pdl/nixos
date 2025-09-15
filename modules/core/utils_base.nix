@@ -1,7 +1,6 @@
 {
   profile,
   pkgs,
-  lib,
   ...
 }: {
   programs = {
@@ -31,9 +30,11 @@
       gping
       font-awesome
 
+      toybox
+      poppler-utils
       ffmpeg
       jq
-      poppler
+      # poppler
       fd
       fzf
       zoxide
