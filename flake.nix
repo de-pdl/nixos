@@ -11,7 +11,7 @@
 
     nixos-hardware.url = "github:NixOS/nixos-hardware/master";
 
-    nvf.url = "github:notashelf/nvf";
+    #nvf.url = "github:notashelf/nvf/";
     stylix.url = "github:danth/stylix/release-25.05";
     sops-nix = {
       url = "github:Mic92/sops-nix";
