@@ -1,6 +1,7 @@
 {
   machine,
   pkgs,
+  username,
   ...
 }: {
   imports = [
@@ -11,10 +12,12 @@
     #./home.nix
   ];
 
-  drivers.amdgpu.enable = true;
-  drivers.nvidia.enable = false;
-  drivers.nvidia-prime.enable = false;
-  drivers.intel.enable = false;
+  drivers = {
+    amdgpu.enable = true;
+    nvidia.enable = false;
+    nvidia-prime.enable = false;
+    intel.enable = false;
+  };
   vm.guest-services.enable = false;
 
   fonts.fontconfig.enable = true;
@@ -23,5 +26,14 @@
   ];
 
   # android
-  virtualisation.waydroid.enable = false;
+  # virtualisation
+  programs.virt-manager.enable = true;
+  users.groups.libvirtd.members = ["${username}"];
+  virtualisation = {
+    waydroid.enable = false;
+    libvirtd.enable = true;
+    spiceUSBRedirection.enable = true;
+  };
+  services.qemuGuest.enable = true;
+  services.spice-vdagentd.enable = true;
 }

@@ -3,7 +3,9 @@
     google-chrome
     discord
     obsidian
+
     spotify
+
     remmina
     bitwarden-desktop
     teams-for-linux
@@ -29,6 +31,12 @@
 
     xournalpp
     sage
+
+    qutebrowser
+
+    quickemu
+
+    libreoffice
   ];
 
   virtualisation.docker = {

@@ -1,11 +1,10 @@
 {
   profile,
   pkgs,
-  lib,
   ...
 }: {
   programs = {
-    dconf.enable = true; #gnome config
+    #dconf.enable = true; #gnome config
 
     hyprland.enable = profile.guiEnable; #change this to depend on gui config
     hyprlock.enable = true;
@@ -30,6 +29,17 @@
       bash
       gping
       font-awesome
+
+      toybox
+      poppler-utils
+      ffmpeg
+      jq
+      # poppler
+      fd
+      fzf
+      zoxide
+      resvg
+      imagemagick
 
       profile.terminalMux
       profile.textEditor
