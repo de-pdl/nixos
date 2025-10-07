@@ -45,7 +45,7 @@
           };
           modules = [
             ./profiles/${profileName}
-            nixos-hardware.nixosModules.microsoft-surface-laptop-amd
+            #nixos-hardware.nixosModules.microsoft-surface-laptop-amd
           ];
         };
 
