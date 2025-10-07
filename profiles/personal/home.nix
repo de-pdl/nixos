@@ -13,7 +13,7 @@
     ../../modules/home/htop.nix
     ../../modules/home/kitty.nix
     ../../modules/home/lazygit.nix
-    #../../modules/home/nvf.nix
+    ../../modules/home/nvf.nix
     ../../modules/home/scripts
     ../../modules/home/yazi
     ../../modules/home/zsh

@@ -37,6 +37,9 @@
     quickemu
 
     libreoffice
+
+    
+    prettierd
   ];
 
   virtualisation.docker = {
