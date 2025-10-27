@@ -2,6 +2,7 @@
   imports = [
     ./hardware.nix
     ./host-packages.nix
+    ./vpn.nix
   ];
 
   environment.etc."hypr/monitor-hook.sh" = {

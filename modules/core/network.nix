@@ -1,6 +1,8 @@
 {
   machine,
   profile,
+  pkgs,
+  config,
   ...
 }: {
   networking = {
@@ -27,6 +29,7 @@
         2590 # docker
       ];
     };
+    wireguard.enable = true;
   };
   services.tailscale = {
     enable = profile.tailscaleEnable;
