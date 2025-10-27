@@ -41,6 +41,8 @@
       resvg
       imagemagick
 
+      gh
+
       profile.terminalMux
       profile.textEditor
       profile.terminalFileManager

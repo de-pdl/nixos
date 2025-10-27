@@ -1,8 +1,6 @@
 {pkgs, ...}: {
   environment.systemPackages = with pkgs; [
-    google-chrome
-    discord
-    obsidian
+    google-chrome #browser
 
     spotify
 
@@ -12,15 +10,12 @@
 
     networkmanagerapplet
 
-    bambu-studio
-
     appimage-run # Needed For AppImage Support
 
     docker-compose # Allows Controlling Docker From A Single File
     #docker
 
     file-roller # Archive Manager
-    gedit # Simple Graphical Text Editor
     lolcat # Add Colors To Your Terminal Command Output
     ncdu # Disk Usage Analyzer With Ncurses Interface
 
@@ -29,17 +24,18 @@
 
     socat # Needed For Screenshots
 
-    xournalpp
-    sage
+    # education systemPackages
+    obsidian # file organisation
+    xournalpp # pdf reader
+    joplin-desktop # note taker
 
-    qutebrowser
+    sage # matlab alternative {should learn how to use}
+    rstudio # excel alternative
 
-    quickemu
-
-    libreoffice
-
-    
-    prettierd
+    quickemu # # virtualisation
+    sticky-notes # sticky-notes
+    libreoffice # office alternative (really laggy)
+    anki-bin # flash notes
   ];
 
   virtualisation.docker = {

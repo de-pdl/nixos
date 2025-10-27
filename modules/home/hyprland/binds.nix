@@ -13,12 +13,13 @@ in {
       "$modifier SHIFT,W,exec,web-search"
       "$modifier ALT,W,exec,wallsetter"
       "$modifier SHIFT,N,exec,swaync-client -rs"
+      #often used apps
       "$modifier,W,exec,${hyprBrowser}"
+      "$modifier SHIFT, O, exec, obsidian"
+      "$modifier SHIFT, N, exec,com.vixalien.sticky"
       "$modifier,Y,exec,kitty -e yazi"
-      "$modifier,E,exec,thunar"
+
       "$modifier,S,exec,screenshootin"
-      "$modifier,D,exec,discord"
-      "$modifier,O,exec,obs"
       "$modifier,C,exec,hyprpicker -a"
       "$modifier,G,exec,gimp"
       "$modifier,T,exec,pypr toggle term"
