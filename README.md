@@ -73,10 +73,5 @@ Starting Point : flake.nix - Import profile - Import machine
 
 ### Author's Note
 
-If you have any questions, Goodluck I dont know either <3. You can send it to
-de.bored.21@gmail.com but I will not be able to guarantee that I know the way.
-
-> Also PS if your from sydney I need a job please (y2 at UNI). Studying
-> Electrical but like money is money and I've got (some sort of) IT / Software
-> (uh homelab) experience.
+THIS PROJECT IS ARCHIVED; Moved away from NixOs to CauchyOs right now as I did not have enough time to customise the system to my liking, I will probably get back to this project and start using declarative Systems once I am more familiar with linux and have more time.
 
